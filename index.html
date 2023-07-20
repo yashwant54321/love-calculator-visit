@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>document</title>
+ 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" 
+  integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+ <style>
+    .mainbox {
+    max-width: 100%;
+    }
+
+     label{
+     font-size:2vw;
+     font-weight: bold;
+     color: white;
+     text-shadow:5px 5px black;
+    }
+
+    input{
+    width: 40%;
+    height: 3vw;
+    border-radius: 20px;
+    background-color: rgb(237, 217, 237);
+    box-shadow:0px 10px 15px black;
+    }
+
+    @media (max-width:765px){
+      label{
+      font-size:4vw ;
+  }
+}
+
+    @media (max-width:765px){
+      input{
+      height:5vw;
+  }
+}
+
+    button {
+      width: 20%;
+      font-weight: bold;
+      font-size: 2vw;
+      background-color:pink;
+      margin-left: 38vw;
+      color:red;
+      border-radius: 30px;
+      box-shadow:0px 10px 15px black;
+    }
+ 
+   
+
+
+    .background-photo{
+      background-image: url(love\ bg.jpg);
+      background-size: cover;
+     background-repeat: no-repeat;
+      height:100vh;
+    }
+
+ @media (max-width:400px){
+  .background-photo{
+    margin-top: 25vw;
+    overflow: hidden;
+  }
+}
+ 
+
+@media (max-width:765px){
+  .shift{
+      margin-left: 15vw;
+  }
+}
+
+
+.gold1{
+  margin-left: 10%;
+  animation: gold1 2s;
+  animation-iteration-count: infinite;
+}
+
+     @keyframes gold1{
+      from{transform:scaleX(-1);
+     }
+      to{transform:scaleX(1);}
+      }
+
+
+.gold2{
+  margin-left: 10%;
+  animation: gold2 2s;
+  animation-iteration-count: infinite;
+}
+   @keyframes gold2{
+      from{transform:scaleX(-1);
+     }
+      to{transform:scaleX(1);}
+      }
+
+      #print {
+      width: 10vw;
+      height:6vw;
+      color:rgb(255, 211, 100);
+      font-size: 4vw;
+      font-weight: bold;
+      position: relative;
+      top: 2vw;
+      left: 42%;
+      text-align: center;
+    }
+    #suggestion {
+      width: 45vw;
+      height:9vw ;
+      color:rgb(96, 188, 227);
+      font-size: 4vw;
+      position: relative;
+      left: 26%;
+      text-align: center;
+    }
+
+
+  </style>
+</head>
+
+<body class="background-photo">
+
+  <img src="golden heart.png" alt="" class="gold1" width="10%">
+  <img src="https://www.lovecalculator.club/img/logo.png" alt="" width="32%" style="margin-top:5%;margin-left: 17vw;">
+  <img src="golden heart.png" alt="" class="gold2" width="10%">
+
+ <br>
+ <br>
+   <div class="container">
+   <div class="row">
+     <div class="col-md">
+ 
+      <label for="fName">Enter Your Name</label>
+      <input type="text" id="fName"  name="fName" class="shift">
+      </div>
+ 
+      <div class="col-md">
+       <label for="sName">Enter Your Partner Name</label>
+      <input type="text" id="sName"  name="sName">
+   
+      
+      </div>
+      </div>
+    </div>
+
+<h1 id="print"></h1>
+<h1 id="suggestion"></h1>
+
+
+<button onclick="calculate()">CALCULATE</button>
+
+
+
+  <script>
+
+ function calculate(){
+var f = document.getElementById("fName").value;
+var s = document.getElementById("fName").value;
+  if (!isNaN(f) && !isNaN(s)) {
+  alert("Please enter valid name");
+  return false;
+     }
+var check =Math.random()*100;
+check = check.toFixed(2);
+document.getElementById("print").innerHTML =check+"%";
+
+}
+
+  </script>
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+
+
+</html>
